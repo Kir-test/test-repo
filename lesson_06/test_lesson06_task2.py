@@ -6,6 +6,7 @@ from lesson_06.cookies_data import (
     USER2_TOKEN,
 )
 
+
 def test_session_storage_auth():
     driver = webdriver.Chrome()
 
@@ -13,12 +14,12 @@ def test_session_storage_auth():
 
     driver.add_cookie({
         "name": "session",
-        "value": "USER1_SESSION"
+        "value": USER1_SESSION
     })
 
     driver.add_cookie({
         "name": "token",
-        "value": "USER1_TOKEN"
+        "value": USER1_TOKEN
     })
 
     driver.refresh()
@@ -33,12 +34,12 @@ def test_session_storage_auth():
 
     driver.add_cookie({
         "name": "session",
-        "value": "USER2_SESSION"
+        "value": USER2_SESSION
     })
 
     driver.add_cookie({
         "name": "token",
-        "value": "USER2_TOKEN"
+        "value": USER2_TOKEN
     })
 
     driver.refresh()
